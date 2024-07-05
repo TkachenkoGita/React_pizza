@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
 
-function SortPopup({items, onClickItem}) {
+function SortPopup({items}) {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
   const sortRef = useRef();
+  const activeLabel = items[activeItem].name;
   
    
    
@@ -45,19 +46,21 @@ function SortPopup({items, onClickItem}) {
         </svg>
         <b>Сортувати за:</b>
         <span ref={sortRef} onClick={toggleVisiblePopup}>
-          {items[activeItem]}
+          {activeLabel}
         </span>
       </div>
       {visiblePopup && (
         <div className="sort__popup">
           <ul>
-            {items.map((name, index) => (
+            {
+              items &&
+              items.map((obj, index) => (
               <li
                 className={activeItem === index ? "active" : ""}
                 onClick={() => onSelectItem(index)}
-                key={`${name}_${index}`}
+                key={`${obj.type}_${index}`}
               >
-                {name}
+                {obj.name}
               </li>
             ))}
           </ul>

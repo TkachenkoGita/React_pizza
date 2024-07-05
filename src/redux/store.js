@@ -1,15 +1,6 @@
 
-import { legacy_createStore } from "redux";
+import { legacy_createStore} from "redux";
+import rootReducer from './reducers/redusers'
 
-function counter(state = 0, action) {
-    switch (action.tipe) {
-        case 'INCREMENT':
-            return state + 1
-        case 'DECREMENT':
-            return state - 1
-        default:
-            return state
-    }
-}
-
-const store = legacy_createStore(counter);
+const store = legacy_createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export default store;
