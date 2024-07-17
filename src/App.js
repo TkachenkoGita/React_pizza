@@ -17,7 +17,7 @@ import { setPizzas  } from "./redux/actions/pizzas";
 //   }, [])
   
 
-//   // return (
+//   // r eturn (
 //   //   <div className="wrapper">
 //   //     <Header />
 
