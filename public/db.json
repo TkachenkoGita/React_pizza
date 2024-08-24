@@ -1,4 +1,6 @@
-[
+{
+  "pizzas":
+  [
   {
     "id": 0,
     "imageUrl": "https://media.dodostatic.net/image/r:292x292/11EE7D61706D472F9A5D71EB94149304.jpg",
@@ -100,3 +102,4 @@
     "rating": 7
   }
 ]
+}

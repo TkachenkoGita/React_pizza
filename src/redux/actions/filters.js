@@ -1,9 +1,9 @@
-const setSortBy = (name) => ({
+export const setSortBy = ({type, order}) => ({
     type: 'SET_SORT_BY',
-    payload: name,
+    payload: {type, order},
 });
 
-const setCategory = (index) => ({
+export const setCategory = (catindex) => ({
   type: "SET_CATEGORY",
-  payload: index,
+  payload: catindex,
 });
