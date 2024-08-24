@@ -22,6 +22,7 @@ function Cart() {
   const onRemoveItem = (id) => {
     if (window.confirm("Ви дійсно бажаєте видалити замовлення?")) {
       dispatch(removeCartItem(id));
+    
        
     }
   }
